@@ -4,7 +4,7 @@
 
 ### This Project is Developed by React js, Node.js, Express.js, MongoDb
 
-server: https://frozen-beach-02774.herokuapp.com 
+server: https://camera-bazar-node-server.onrender.com
 
 
 Here We Used Some Technology: 
