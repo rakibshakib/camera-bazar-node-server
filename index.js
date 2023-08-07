@@ -9,12 +9,20 @@ const { MongoClient } = require("mongodb");
 
 require("dotenv").config();
 
-// firebase token varificatiion
-const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
-// require("./doctors-portal-rs-firebase-adminsdk.json");
+var serviceAccount = require("./camera-bazar-app-firebase-adminsdk.json");
+
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
+  databaseURL: "https://camera-bazar-app-default-rtdb.firebaseio.com"
 });
+
+// // firebase token varificatiion
+// const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
+// console.log({serviceAccount})
+// // require("./doctors-portal-rs-firebase-adminsdk.json");
+// admin.initializeApp({
+//   credential: admin.credential.cert(serviceAccount),
+// });
 
 // middleware
 app.use(cors());
